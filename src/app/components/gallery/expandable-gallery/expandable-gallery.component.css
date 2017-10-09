@@ -1,0 +1,27 @@
+.fixit {
+    height: 800px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.container>* {
+    margin-top: 32px;
+}
+
+.row {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.little {
+    max-width: 10vw;
+}

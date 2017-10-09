@@ -1,0 +1,15 @@
+.spacer {
+    flex: 1;
+}
+
+.header-item {}
+
+.header-img {
+    display: block;
+    max-height: 100%;
+    margin-right: 32px;
+}
+
+md-toolbar {
+    background-color: white;
+}

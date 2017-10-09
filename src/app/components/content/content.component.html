@@ -1,0 +1,11 @@
+<!--div *ngIf="page === 'home'">
+    <app-home [items$]="items$" (page)="link()"></app-home>
+</div>
+
+<div *ngIf="page === 'contact'">
+    <app-contact [user$]="user$"></app-contact>
+</div>
+
+<div *ngIf="page === 'gallery'">
+    <app-expandable-gallery [width]="'100%'" [itemWidth]="250" [items$]="items$" [user$]="user$"></app-expandable-gallery>
+</div-->

@@ -1,0 +1,6 @@
+<div>
+    <div class="gallery-row">
+        <app-expandable-gallery-item *ngFor="let item of items; let index = index" [itemIndex]="index" [rowIndex]="rowIndex" [width]="itemWidth" [item]="item" (selectEvent)="select($event)"></app-expandable-gallery-item>
+    </div>
+    <app-expandable-gallery-expand-panel *ngIf="expanded" [item]="selectedItem" [itemIndex]="selectedItemIndex" [itemWidth]="itemWidth" [leftPadding]="leftPadding" (closeEvent)="close()"></app-expandable-gallery-expand-panel>
+</div>

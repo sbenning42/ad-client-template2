@@ -1,0 +1,44 @@
+<!-- Expand Panel -->
+<div class="expand-panel" *ngIf="!closed" [@flyInOut]>
+
+    <!-- Selector Arrow -->
+    <div class="selector" [ngStyle]="{'left': left}"></div>
+
+    <!-- Flex Spacer -->
+    <span style="flex: 1"></span>
+
+    <!-- Big Carousel -->
+    <div class="item-slider" *ngIf="sliderReady && listOfItems">
+        <app-slider [urls]="listOfItems" [width]="'100%'"></app-slider>
+    </div>
+
+    <!-- Flex Spacer -->
+    <span style="flex: 0.50"></span>
+
+    <!-- Detail Panel -->
+    <div class="item-details">
+
+        <!-- Item Name -->
+        <h3 [ngStyle]="{'font-size': '24px'}">{{ item.name }}</h3>
+
+        <!-- Item Description -->
+        <p [ngStyle]="{'font-size': '18px'}">
+            {{ item.description }}
+        </p>
+
+        <!-- Item Price -->
+        <p class="item-meta-price" [ngStyle]="{'font-size': '32px'}">
+            <!-- Flex Spacer -->
+            <span style="flex: 1;"></span>
+            <strong>Price</strong>: {{ item.price }} Euros
+        </p>
+
+    </div>
+
+    <!-- Flex Spacer -->
+    <span style="flex: 1"></span>
+
+    <!-- Close Expanding panel Button -->
+    <button md-icon-button (click)="close()"><md-icon>close</md-icon></button>
+
+</div>

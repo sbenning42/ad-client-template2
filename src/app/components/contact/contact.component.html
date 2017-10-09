@@ -1,0 +1,23 @@
+<div class="container"><img class="little w3-circle" src="{{ avatar$|async }}">
+    <h3>
+        {{ userName$|async }}
+    </h3>
+    <md-card>
+        <md-card-header>
+            <md-card-title>
+                <md-icon>location_on</md-icon><span> &nbsp;</span>
+                <span style="font-size: 18px;">{{ (address$|async)?.last_name }} {{ (address$|async)?.first_name }}</span>
+            </md-card-title>
+            <md-card-subtitle>
+                <md-icon>phone</md-icon><span> &nbsp;</span>{{ (address$|async)?.telephone }}
+            </md-card-subtitle>
+        </md-card-header>
+        <md-card-content>
+
+            <p translate="no" style="font-size: 18px;">
+                {{(address$|async)?.last_name}} {{(address$|async)?.first_name}}<br> {{(address$|async)?.address}}<br> {{(address$|async)?.complement}}<br> <span *ngIf="(address$|async)?.postcode && (address$|async)?.city && (address$|async)?.country_id">{{(address$|async)?.postcode}}, {{(address$|async)?.city}}, {{(address$|async)?.country_id}}</span>
+            </p>
+
+        </md-card-content>
+    </md-card>
+</div>

@@ -1,0 +1,11 @@
+<div class="container"><img class="little w3-circle" src="{{ avatar$|async }}">
+    <h3>
+        {{ userName$|async }}
+    </h3>
+</div>
+
+<div #gallery [ngStyle]="{'width': width}" (window:resize)="resize()">
+    <app-expandable-gallery-row *ngFor="let index of counter$|async" [expanded]="index === selectedRow" [itemWidth]="itemWidth" [leftPadding]="getPadding(index)" [items]="items?.slice((index * nbrItemsByRow), (index * nbrItemsByRow) + nbrItemsByRow)" [rowIndex]="index"
+        (selectEvent)="select($event)" (closeEvent)="close($event)"></app-expandable-gallery-row>
+    <div class="fixit"></div>
+</div>

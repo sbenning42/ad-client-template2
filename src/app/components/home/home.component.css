@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container>* {
+    margin-top: 32px;
+}
+
+.row {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.little {
+    max-width: 10vw;
+}
+
+.big {
+    max-width: 80vw;
+    cursor: pointer;
+}
